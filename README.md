@@ -1,6 +1,4 @@
-<div align="center">
-
-### `afsal@github ~ $ whoami`
+<div align="center"><h3><code>afsal@github ~ $ whoami</code></h3>
 
 <table>
   <tr>
@@ -9,19 +7,19 @@
   </tr>
 </table>
 
-### `afsal@github ~ $ ./languages.sh`
+<h3><code>afsal@github ~ $ ./languages.sh</code></h3>
 
 <img src="./languages.svg" width="860" alt="Most used languages across Afsal's public GitHub repositories" />
 
-### `afsal@github ~ $ ./projects.sh`
+<h3><code>afsal@github ~ $ ./projects.sh</code></h3>
 
 <img src="./projects.svg" width="860" alt="Featured Recipe.IO and JailMeet projects" />
 
-### `afsal@github ~ $ ./about.sh`
+<h3><code>afsal@github ~ $ ./about.sh</code></h3>
 
 Building modern, secure, and scalable web applications from development to deployment.
 
-### `afsal@github ~ $ ./connect.sh`
+<h3><code>afsal@github ~ $ ./connect.sh</code></h3>
 
 <img src="./connect.svg" width="860" alt="Links to Afsal's public social profiles" />
 
