@@ -54,7 +54,7 @@ parts = [
     f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc">',
     '<title id="title">Animated ASCII portrait of Afsal A Azeez</title>',
     '<desc id="desc">A high-density monochrome terminal halftone portrait that sketches itself once over a transparent background.</desc>',
-    '<style>text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}</style>',
+    '<style>text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.row{animation:draw .216s steps(7,end) both}.cursor{transform-box:fill-box;transform-origin:left center;animation:cursor .216s linear both}@keyframes draw{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}@keyframes cursor{0%{opacity:0;transform:translateX(0)}8%{opacity:.9}90%{opacity:.9}100%{opacity:0;transform:translateX(590px)}}</style>',
     f'<line x2="{WIDTH}" y1="{BAR}" y2="{BAR}" stroke="#30363d"/>',
     f'<text x="{WIDTH / 2}" y="20" text-anchor="middle" fill="#8b949e" font-size="12">afsal@github: ~/whoami</text>',
 ]
@@ -66,17 +66,14 @@ for row, line in enumerate(lines):
     delay, duration = row * 0.041, 0.216
     row_y = BAR + row * CELL_H
     text_y = BAR + 17 + row * CELL_H
-    text = (f'<text x="{PAD}" y="{text_y:.2f}" fill="{PORTRAIT_COLOR}" '
+    text = (f'<text class="row" x="{PAD}" y="{text_y:.2f}" fill="{PORTRAIT_COLOR}" '
             f'font-size="{CELL_H * .86:.2f}" xml:space="preserve" textLength="{ART_W:.2f}" '
-            f'lengthAdjust="spacing">{escape(line)}</text>')
-    # Keep text visible by default: GitHub's SVG proxy can disable SMIL clip paths.
-    # The cursor still sketches row-by-row in renderers that support SMIL.
+            f'lengthAdjust="spacing" style="animation-delay:{delay:.3f}s">{escape(line)}</text>')
+    # CSS animation works in GitHub-rendered SVGs; without it, the text stays visible.
     parts.append(text)
     parts.append(
         f'<rect x="{PAD}" y="{row_y + 1:.2f}" width="{CELL_W:.2f}" height="{CELL_H - 2:.2f}" '
-        f'fill="{PORTRAIT_COLOR}" opacity="0"><set attributeName="opacity" to="0.9" begin="{delay:.3f}s"/>'
-        f'<animate attributeName="x" from="{PAD}" to="{PAD + ART_W:.2f}" begin="{delay:.3f}s" dur="{duration:.3f}s" fill="freeze"/>'
-        f'<set attributeName="opacity" to="0" begin="{delay + duration:.3f}s"/></rect>'
+        f'fill="{PORTRAIT_COLOR}" opacity="0" class="cursor" style="animation-delay:{delay:.3f}s"/>'
     )
 
 parts += [
