@@ -66,7 +66,13 @@ def render_project_card(project: dict, x: int, index: int) -> str:
         badge_w = 12 + len(label) * 6
         parts.append(f'<rect x="{badge_x}" y="{y+155}" width="{badge_w}" height="20" rx="4" fill="#21262d"/><text x="{badge_x+6}" y="{y+169}" fill="{LANG_COLORS.get(language["name"], BLUE)}" font-size="9">{escape(label)}</text>')
         badge_x += badge_w + 7
-    parts += [f'<line x1="{x+18}" x2="{x+378}" y1="{y+196}" y2="{y+196}" stroke="{BORDER}"/>', f'<text x="{x+18}" y="{y+218}" fill="{MUTED}" font-size="10">Updated {updated}</text><text x="{x+378}" y="{y+218}" text-anchor="end" fill="{GREEN}" font-size="10">● {project["visibility"]}</text>', f'<a href="{escape(project["url"], quote=True)}"><text x="{x+18}" y="{y+240}" fill="{BLUE}" font-size="10">github.com/{escape(project["repository"])}</text></a></g>']
+    demo_label = "Live Demo" if project.get("live_demo") else "Coming Soon"
+    demo_body = f'<rect x="{x+270}" y="{y+204}" width="108" height="23" rx="4" fill="#1f6feb"/><text x="{x+324}" y="{y+220}" text-anchor="middle" fill="#fff" font-size="10">{demo_label}</text>'
+    if project.get("live_demo"):
+        demo = f'<a href="{escape(project["live_demo"], quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="Open {escape(project["title"], quote=True)} live demo in a new tab">{demo_body}</a>'
+    else:
+        demo = f'<g opacity=".5" aria-label="{escape(project["title"], quote=True)} live demo coming soon" aria-disabled="true">{demo_body}</g>'
+    parts += [f'<line x1="{x+18}" x2="{x+378}" y1="{y+196}" y2="{y+196}" stroke="{BORDER}"/>', f'<text x="{x+18}" y="{y+218}" fill="{MUTED}" font-size="10">Updated {updated}</text><text x="{x+252}" y="{y+218}" text-anchor="end" fill="{GREEN}" font-size="10">● {project["visibility"]}</text>', demo, f'<a href="{escape(project["url"], quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="Open {escape(project["title"], quote=True)} GitHub repository in a new tab"><text x="{x+18}" y="{y+240}" fill="{BLUE}" font-size="10">github.com/{escape(project["repository"])}</text></a></g>']
     return "".join(parts)
 
 
@@ -85,8 +91,12 @@ def render_connect() -> None:
     for index, (label, link) in enumerate(buttons):
         x = 24 + index * 164
         body = f'<rect x="{x}" y="52" width="148" height="45" rx="7" fill="#111722" stroke="{BORDER}"/><text x="{x+18}" y="80" fill="{GREEN if link else MUTED}" font-size="13">{">" if link else "·"}</text><text x="{x+36}" y="80" fill="{TEXT}" font-size="11">{label}</text>'
-        if link: body = f'<a href="{escape(link, quote=True)}">{body}</a>'
-        else: body += f'<text x="{x+36}" y="91" fill="{MUTED}" font-size="8">Coming Soon</text>'
+        if link:
+            attrs = ' target="_blank" rel="noopener noreferrer"' if label != "Email" else ''
+            description = f'Open {label} profile' if label != "Email" else 'Send email to Afsal S Azeez'
+            body = f'<a href="{escape(link, quote=True)}"{attrs} aria-label="{description}">{body}</a>'
+        else:
+            body = f'<g opacity=".5" aria-label="Portfolio coming soon" aria-disabled="true">{body}<text x="{x+36}" y="91" fill="{MUTED}" font-size="8">Coming Soon</text></g>'
         parts.append(f'<g class="reveal" style="animation-delay:{index*.08:.2f}s">{body}</g>')
     parts.append('</svg>')
     (ROOT / "connect.svg").write_text("".join(parts), encoding="utf-8")

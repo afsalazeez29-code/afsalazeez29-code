@@ -20,8 +20,8 @@ if TOKEN:
     HEADERS["Authorization"] = f"Bearer {TOKEN}"
 
 PROJECTS = {
-    "RSP-PROJECT": {"title": "Recipe.IO", "description": "Recipe sharing platform"},
-    "JailMeet2.0": {"title": "JailMeet", "description": "Secure prison visit and parole management platform"},
+    "RSP-PROJECT": {"title": "Recipe.IO", "description": "Recipe sharing platform", "live_demo": "https://rsp-project-xi.vercel.app/"},
+    "JailMeet2.0": {"title": "JailMeet", "description": "Secure prison visit and parole management platform", "live_demo": None},
 }
 
 
@@ -66,6 +66,8 @@ def social_links() -> dict[str, str]:
     profile = get(f"/users/{USERNAME}")
     if profile.get("email"):
         links["Email"] = f"mailto:{profile['email']}"
+    for service in ("LinkedIn", "Instagram"):
+        links[service] = links[service].rstrip("/") + "/"
     return links
 
 

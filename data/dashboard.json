@@ -1,6 +1,6 @@
 {
   "username": "afsalazeez29-code",
-  "generated_at": "2026-07-31T23:01:11Z",
+  "generated_at": "2026-07-31T23:49:19Z",
   "languages": [
     {
       "name": "JavaScript",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Python",
-      "bytes": 21738,
+      "bytes": 22217,
       "percent": 1.2
     },
     {
@@ -37,6 +37,7 @@
     {
       "title": "Recipe.IO",
       "description": "Recipe sharing platform",
+      "live_demo": "https://rsp-project-xi.vercel.app/",
       "repository": "RSP-PROJECT",
       "url": "https://github.com/afsalazeez29-code/RSP-PROJECT",
       "visibility": "Public",
@@ -68,6 +69,7 @@
     {
       "title": "JailMeet",
       "description": "Secure prison visit and parole management platform",
+      "live_demo": null,
       "repository": "JailMeet2.0",
       "url": "https://github.com/afsalazeez29-code/JailMeet2.0",
       "visibility": "Public",
@@ -94,8 +96,8 @@
   ],
   "socials": {
     "GitHub": "https://github.com/afsalazeez29-code",
-    "LinkedIn": "https://www.linkedin.com/in/afsal-a-azeez29",
-    "Instagram": "https://www.instagram.com/afzyl._",
+    "LinkedIn": "https://www.linkedin.com/in/afsal-a-azeez29/",
+    "Instagram": "https://www.instagram.com/afzyl._/",
     "Email": "mailto:afsalazeez29@gmail.com"
   }
 }
