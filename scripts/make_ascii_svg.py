@@ -69,12 +69,9 @@ for row, line in enumerate(lines):
     text = (f'<text x="{PAD}" y="{text_y:.2f}" fill="{PORTRAIT_COLOR}" '
             f'font-size="{CELL_H * .86:.2f}" xml:space="preserve" textLength="{ART_W:.2f}" '
             f'lengthAdjust="spacing">{escape(line)}</text>')
-    parts.append(
-        f'<clipPath id="row-{row}"><rect x="{PAD}" y="{row_y:.2f}" width="0" height="{CELL_H:.2f}">'
-        f'<animate attributeName="width" from="0" to="{ART_W:.2f}" begin="{delay:.3f}s" dur="{duration:.3f}s" fill="freeze"/>'
-        '</rect></clipPath>'
-    )
-    parts.append(f'<g clip-path="url(#row-{row})">{text}</g>')
+    # Keep text visible by default: GitHub's SVG proxy can disable SMIL clip paths.
+    # The cursor still sketches row-by-row in renderers that support SMIL.
+    parts.append(text)
     parts.append(
         f'<rect x="{PAD}" y="{row_y + 1:.2f}" width="{CELL_W:.2f}" height="{CELL_H - 2:.2f}" '
         f'fill="{PORTRAIT_COLOR}" opacity="0"><set attributeName="opacity" to="0.9" begin="{delay:.3f}s"/>'
