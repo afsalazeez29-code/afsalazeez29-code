@@ -1,9 +1,5 @@
 <div align="center">
 
-### `afsal@github ~ $ ./contributions.sh`
-
-<img src="./contrib-heatmap.svg" width="860" alt="afsalazeez29-code GitHub contribution graph" />
-
 ### `afsal@github ~ $ whoami`
 
 <table>
@@ -12,6 +8,10 @@
     <td valign="top"><img src="./info-card.svg" width="490" alt="Afsal A Azeez developer information" /></td>
   </tr>
 </table>
+
+### `afsal@github ~ $ ./contributions.sh`
+
+<img src="./contrib-heatmap.svg" width="860" alt="afsalazeez29-code GitHub contribution graph" />
 
 ### `afsal@github ~ $ ./about.sh`
 

@@ -22,7 +22,7 @@ parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}
  '<title id="title">Animated ASCII portrait of Afsal A Azeez</title><desc id="desc">A monochrome terminal portrait that reveals once and remains visible.</desc>',
  '<style>text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.row{opacity:0;animation:reveal .18s ease-out forwards}@keyframes reveal{to{opacity:1}}</style>',
  f'<rect width="{width}" height="{height}" rx="12" fill="#0d1117"/><rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="12" fill="none" stroke="#30363d"/>',
- f'<line x2="{width}" y1="{bar}" y2="{bar}" stroke="#30363d"/><text x="{width/2}" y="20" text-anchor="middle" fill="#8b949e" font-size="12">afsal@github: ~/portrait</text>']
+ f'<line x2="{width}" y1="{bar}" y2="{bar}" stroke="#30363d"/><text x="{width/2}" y="20" text-anchor="middle" fill="#8b949e" font-size="12">afsal@github: ~/whoami</text>']
 for i, color in enumerate(("#8b949e", "#6e7681", "#484f58")):
     parts.append(f'<circle cx="{pad+i*15}" cy="15" r="4" fill="{color}"/>')
 for y, line in enumerate(lines):
