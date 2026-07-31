@@ -43,9 +43,12 @@ def render_project_card(project: dict, x: int, index: int) -> str:
     color = LANG_COLORS.get(dominant["name"], BLUE)
     updated = datetime.fromisoformat(project["updated_at"].replace("Z", "+00:00")).strftime("%d %b %Y")
     description = textwrap.wrap(project["description"], width=48, break_long_words=False)[:2]
+    local_logos = {"RSP-PROJECT": "RecipeIO.png", "JailMeet2.0": "JailMeet.jpg"}
+    local_logo = local_logos.get(project["repository"])
+    image_source = f"./{local_logo}" if local_logo and (ROOT / local_logo).is_file() else project.get("logo_url")
     parts = [f'<g class="reveal" style="animation-delay:{.12+index*.14:.2f}s"><rect x="{x}" y="{y}" width="{card_w}" height="{card_h}" rx="10" fill="#111722" stroke="{BORDER}"/>']
-    if project.get("logo_url"):
-        parts.append(f'<image href="{escape(project["logo_url"], quote=True)}" x="{x+18}" y="{y+18}" width="34" height="34" preserveAspectRatio="xMidYMid meet"/>')
+    if image_source:
+        parts.append(f'<image href="{escape(image_source, quote=True)}" x="{x+18}" y="{y+18}" width="34" height="34" preserveAspectRatio="xMidYMid meet"/>')
     else:
         parts.append(f'<rect x="{x+18}" y="{y+18}" width="34" height="34" rx="7" fill="#1f6feb"/><text x="{x+35}" y="{y+41}" text-anchor="middle" fill="#fff" font-size="16">{escape(project["title"][0])}</text>')
     parts += [f'<text x="{x+66}" y="{y+34}" fill="{TEXT}" font-size="15">{escape(project["title"])}</text>', f'<text x="{x+66}" y="{y+51}" fill="{MUTED}" font-size="10">{escape(project["repository"])}</text>']
