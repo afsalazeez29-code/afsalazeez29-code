@@ -9,12 +9,20 @@
   </tr>
 </table>
 
-### `afsal@github ~ $ ./contributions.sh`
+### `afsal@github ~ $ ./languages.sh`
 
-<img src="./contrib-heatmap.svg" width="860" alt="afsalazeez29-code GitHub contribution graph" />
+<img src="./languages.svg" width="860" alt="Most used languages across Afsal's public GitHub repositories" />
+
+### `afsal@github ~ $ ./projects.sh`
+
+<img src="./projects.svg" width="860" alt="Featured Recipe.IO and JailMeet projects" />
 
 ### `afsal@github ~ $ ./about.sh`
 
 Building modern, secure, and scalable web applications from development to deployment.
+
+### `afsal@github ~ $ ./connect.sh`
+
+<img src="./connect.svg" width="860" alt="Links to Afsal's public social profiles" />
 
 </div>

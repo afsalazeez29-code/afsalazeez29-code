@@ -1,4 +1,4 @@
-name: Update profile art
+name: Update profile dashboard
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  heatmap:
+  dashboard:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,14 +18,15 @@ jobs:
           python-version: "3.11"
       - name: Install dependencies
         run: pip install requests==2.32.3 beautifulsoup4==4.12.3
-      - name: Fetch public contribution data
+      - name: Fetch live GitHub dashboard data
         env:
           GH_PROFILE_USER: afsalazeez29-code
-        run: python scripts/fetch_contributions.py
-      - name: Render contribution heatmap
-        run: python scripts/render_heatmap_svg.py
-      - name: Commit updated art
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_dashboard.py
+      - name: Render dashboard SVGs
+        run: python scripts/render_dashboard.py
+      - name: Commit refreshed dashboard
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg"
+          commit_message: "chore: refresh profile dashboard [skip ci]"
+          file_pattern: "data/dashboard.json languages.svg projects.svg connect.svg"

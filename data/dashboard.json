@@ -1,0 +1,101 @@
+{
+  "username": "afsalazeez29-code",
+  "generated_at": "2026-07-31T23:00:29Z",
+  "languages": [
+    {
+      "name": "JavaScript",
+      "bytes": 902177,
+      "percent": 48.8
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 674982,
+      "percent": 36.5
+    },
+    {
+      "name": "CSS",
+      "bytes": 188571,
+      "percent": 10.2
+    },
+    {
+      "name": "HTML",
+      "bytes": 60934,
+      "percent": 3.3
+    },
+    {
+      "name": "Python",
+      "bytes": 15096,
+      "percent": 0.8
+    },
+    {
+      "name": "EJS",
+      "bytes": 8727,
+      "percent": 0.5
+    }
+  ],
+  "projects": [
+    {
+      "title": "Recipe.IO",
+      "description": "Recipe sharing platform",
+      "repository": "RSP-PROJECT",
+      "url": "https://github.com/afsalazeez29-code/RSP-PROJECT",
+      "visibility": "Public",
+      "updated_at": "2026-07-02T20:40:11Z",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "bytes": 872798,
+          "percent": 90.7
+        },
+        {
+          "name": "CSS",
+          "bytes": 85306,
+          "percent": 8.9
+        },
+        {
+          "name": "HTML",
+          "bytes": 4319,
+          "percent": 0.4
+        },
+        {
+          "name": "EJS",
+          "bytes": 305,
+          "percent": 0.0
+        }
+      ],
+      "logo_url": "https://raw.githubusercontent.com/afsalazeez29-code/RSP-PROJECT/main/frontend/public/favicon-16x16.png"
+    },
+    {
+      "title": "JailMeet",
+      "description": "Secure prison visit and parole management platform",
+      "repository": "JailMeet2.0",
+      "url": "https://github.com/afsalazeez29-code/JailMeet2.0",
+      "visibility": "Public",
+      "updated_at": "2026-07-31T19:16:58Z",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 674982,
+          "percent": 86.2
+        },
+        {
+          "name": "CSS",
+          "bytes": 98859,
+          "percent": 12.6
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 9410,
+          "percent": 1.2
+        }
+      ],
+      "logo_url": "https://raw.githubusercontent.com/afsalazeez29-code/JailMeet2.0/main/Frontend/public/images/logos/favicon.jpg"
+    }
+  ],
+  "socials": {
+    "GitHub": "https://github.com/afsalazeez29-code",
+    "LinkedIn": "https://www.linkedin.com/in/afsal-a-azeez29",
+    "Instagram": "https://www.instagram.com/afzyl._",
+    "Email": "mailto:afsalazeez29@gmail.com"
+  }
+}
