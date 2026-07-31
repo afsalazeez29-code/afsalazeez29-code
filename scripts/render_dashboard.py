@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "data" / "dashboard.json").read_text(encoding="utf-8"))
-BG, BORDER, MUTED, TEXT, GREEN, BLUE = "#0d1117", "#30363d", "#8b949e", "#c9d1d9", "#56d364", "#58a6ff"
+BG, BORDER, MUTED, TEXT, GREEN, BLUE = "#0d1117", "#30363d", "#8b949e", "#c9d1d9", "#9FE4FB", "#58a6ff"
 LANG_COLORS = {"JavaScript":"#f1e05a", "TypeScript":"#3178c6", "Python":"#3572A5", "Java":"#b07219", "PHP":"#4F5D95", "HTML":"#e34c26", "CSS":"#563d7c", "EJS":"#a91e50", "Shell":"#89e051", "Dockerfile":"#384d54"}
 
 

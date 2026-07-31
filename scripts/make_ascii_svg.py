@@ -15,7 +15,7 @@ WIDTH, HEIGHT, PAD, BAR = 630, 866, 20, 31
 COLS, ROWS = 96, 78
 ART_W, ART_H = WIDTH - PAD * 2, HEIGHT - 78
 CELL_W, CELL_H = ART_W / COLS, ART_H / ROWS
-PORTRAIT_COLOR = "#56d364"
+PORTRAIT_COLOR = "#9FE4FB"
 RAMP = " .:*cCsS"  # light to dense; intentionally excludes heavy symbols
 
 
