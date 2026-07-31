@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import textwrap
+from base64 import b64encode
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -45,7 +46,12 @@ def render_project_card(project: dict, x: int, index: int) -> str:
     description = textwrap.wrap(project["description"], width=48, break_long_words=False)[:2]
     local_logos = {"RSP-PROJECT": "RecipeIO.png", "JailMeet2.0": "JailMeet.jpg"}
     local_logo = local_logos.get(project["repository"])
-    image_source = f"./{local_logo}" if local_logo and (ROOT / local_logo).is_file() else project.get("logo_url")
+    if local_logo and (ROOT / local_logo).is_file():
+        image_path = ROOT / local_logo
+        mime = "image/png" if image_path.suffix.lower() == ".png" else "image/jpeg"
+        image_source = f"data:{mime};base64,{b64encode(image_path.read_bytes()).decode('ascii')}"
+    else:
+        image_source = project.get("logo_url")
     parts = [f'<g class="reveal" style="animation-delay:{.12+index*.14:.2f}s"><rect x="{x}" y="{y}" width="{card_w}" height="{card_h}" rx="10" fill="#111722" stroke="{BORDER}"/>']
     if image_source:
         parts.append(f'<image href="{escape(image_source, quote=True)}" x="{x+18}" y="{y+18}" width="34" height="34" preserveAspectRatio="xMidYMid meet"/>')
