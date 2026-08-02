@@ -1,36 +1,36 @@
 {
   "username": "afsalazeez29-code",
-  "generated_at": "2026-08-01T08:33:04Z",
+  "generated_at": "2026-08-02T08:36:22Z",
   "languages": [
     {
+      "name": "CSS",
+      "bytes": 1817425,
+      "percent": 49.4
+    },
+    {
       "name": "JavaScript",
-      "bytes": 902177,
-      "percent": 48.5
+      "bytes": 908920,
+      "percent": 24.7
     },
     {
       "name": "TypeScript",
-      "bytes": 674982,
-      "percent": 36.3
-    },
-    {
-      "name": "CSS",
-      "bytes": 188571,
-      "percent": 10.1
+      "bytes": 859207,
+      "percent": 23.4
     },
     {
       "name": "HTML",
       "bytes": 60934,
-      "percent": 3.3
+      "percent": 1.7
     },
     {
       "name": "Python",
       "bytes": 23531,
-      "percent": 1.3
+      "percent": 0.6
     },
     {
       "name": "EJS",
       "bytes": 8727,
-      "percent": 0.5
+      "percent": 0.2
     }
   ],
   "projects": [
@@ -73,22 +73,22 @@
       "repository": "JailMeet2.0",
       "url": "https://github.com/afsalazeez29-code/JailMeet2.0",
       "visibility": "Public",
-      "updated_at": "2026-07-31T19:16:58Z",
+      "updated_at": "2026-08-02T00:10:29Z",
       "languages": [
         {
-          "name": "TypeScript",
-          "bytes": 674982,
-          "percent": 86.2
+          "name": "CSS",
+          "bytes": 1727713,
+          "percent": 66.4
         },
         {
-          "name": "CSS",
-          "bytes": 98859,
-          "percent": 12.6
+          "name": "TypeScript",
+          "bytes": 859207,
+          "percent": 33.0
         },
         {
           "name": "JavaScript",
-          "bytes": 9410,
-          "percent": 1.2
+          "bytes": 16153,
+          "percent": 0.6
         }
       ],
       "logo_url": "https://raw.githubusercontent.com/afsalazeez29-code/JailMeet2.0/main/Frontend/public/images/logos/favicon.jpg"
