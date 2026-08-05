@@ -1,21 +1,21 @@
 {
   "username": "afsalazeez29-code",
-  "generated_at": "2026-08-04T09:05:52Z",
+  "generated_at": "2026-08-05T08:51:12Z",
   "languages": [
     {
       "name": "CSS",
       "bytes": 1836032,
-      "percent": 46.5
+      "percent": 46.0
     },
     {
       "name": "TypeScript",
       "bytes": 1107923,
-      "percent": 28.1
+      "percent": 27.8
     },
     {
       "name": "JavaScript",
-      "bytes": 908920,
-      "percent": 23.0
+      "bytes": 909106,
+      "percent": 22.8
     },
     {
       "name": "HTML",
@@ -23,14 +23,29 @@
       "percent": 1.5
     },
     {
+      "name": "Svelte",
+      "bytes": 30513,
+      "percent": 0.8
+    },
+    {
       "name": "Python",
       "bytes": 23531,
       "percent": 0.6
     },
     {
+      "name": "Astro",
+      "bytes": 14199,
+      "percent": 0.4
+    },
+    {
       "name": "EJS",
       "bytes": 8727,
       "percent": 0.2
+    },
+    {
+      "name": "SCSS",
+      "bytes": 1284,
+      "percent": 0.0
     }
   ],
   "projects": [
@@ -41,7 +56,7 @@
       "repository": "RSP-PROJECT",
       "url": "https://github.com/afsalazeez29-code/RSP-PROJECT",
       "visibility": "Public",
-      "updated_at": "2026-07-02T20:40:11Z",
+      "updated_at": "2026-08-04T23:33:53Z",
       "languages": [
         {
           "name": "JavaScript",
@@ -73,7 +88,7 @@
       "repository": "JailMeet2.0",
       "url": "https://github.com/afsalazeez29-code/JailMeet2.0",
       "visibility": "Public",
-      "updated_at": "2026-08-03T23:39:54Z",
+      "updated_at": "2026-08-04T23:33:52Z",
       "languages": [
         {
           "name": "CSS",
