@@ -1,21 +1,21 @@
 {
   "username": "afsalazeez29-code",
-  "generated_at": "2026-08-07T07:39:40Z",
+  "generated_at": "2026-08-08T07:12:50Z",
   "languages": [
     {
       "name": "CSS",
       "bytes": 1836032,
-      "percent": 45.8
+      "percent": 45.5
     },
     {
       "name": "TypeScript",
       "bytes": 1107923,
-      "percent": 27.7
+      "percent": 27.5
     },
     {
       "name": "JavaScript",
       "bytes": 940087,
-      "percent": 23.5
+      "percent": 23.3
     },
     {
       "name": "HTML",
@@ -23,19 +23,19 @@
       "percent": 1.5
     },
     {
+      "name": "Astro",
+      "bytes": 37348,
+      "percent": 0.9
+    },
+    {
       "name": "Python",
       "bytes": 23531,
       "percent": 0.6
     },
     {
-      "name": "Astro",
-      "bytes": 14955,
-      "percent": 0.4
-    },
-    {
       "name": "Svelte",
-      "bytes": 11947,
-      "percent": 0.3
+      "bytes": 16112,
+      "percent": 0.4
     },
     {
       "name": "EJS",
@@ -44,7 +44,7 @@
     },
     {
       "name": "SCSS",
-      "bytes": 1275,
+      "bytes": 1393,
       "percent": 0.0
     }
   ],
