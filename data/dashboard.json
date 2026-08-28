@@ -1,6 +1,6 @@
 {
   "username": "afsalazeez29-code",
-  "generated_at": "2026-08-27T17:36:52Z",
+  "generated_at": "2026-08-28T18:39:04Z",
   "languages": [
     {
       "name": "CSS",
@@ -19,12 +19,12 @@
     },
     {
       "name": "Svelte",
-      "bytes": 159462,
+      "bytes": 159329,
       "percent": 3.7
     },
     {
       "name": "Astro",
-      "bytes": 68102,
+      "bytes": 69148,
       "percent": 1.6
     },
     {
