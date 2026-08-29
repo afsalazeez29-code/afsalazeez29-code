@@ -1,6 +1,6 @@
 {
   "username": "afsalazeez29-code",
-  "generated_at": "2026-08-28T18:39:04Z",
+  "generated_at": "2026-08-29T12:39:54Z",
   "languages": [
     {
       "name": "CSS",
@@ -10,7 +10,7 @@
     {
       "name": "TypeScript",
       "bytes": 1107923,
-      "percent": 26.0
+      "percent": 25.9
     },
     {
       "name": "JavaScript",
@@ -24,8 +24,8 @@
     },
     {
       "name": "Astro",
-      "bytes": 69148,
-      "percent": 1.6
+      "bytes": 71009,
+      "percent": 1.7
     },
     {
       "name": "HTML",
